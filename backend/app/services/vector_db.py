@@ -62,3 +62,14 @@ class VectorDBClient:
         )
         embedding = response.data[0].embedding
         return embedding
+
+    
+    def search_embeddings(self, query_embedding, top_k=5):
+        # Perform search in Qdrant
+        search_result = self.client.search(
+            collection_name=self.collection_name,
+            query_vector=query_embedding,
+            limit=top_k,
+            with_payload=True  # Include payload in results
+        )
+        return search_result
