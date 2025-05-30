@@ -1,1 +1,1 @@
-A RAG Based application which lets you query woth your Blockchain Data
+A RAG Based application which lets you query woith your Blockchain Data
